@@ -1,11 +1,12 @@
 const db = require("./db/connection");
-const express = require("express");
-const startInquirer = require("./lib/departments");
-const { connected } = require("process");
+const express = require('express');
+ const startInquirer = require("./lib/departments");
+// import inquirer from "inquirer";
+// const { connected } = require("process");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-app.use(express.urlencode({extended: false}));
+app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 app.use((req, res) => {
